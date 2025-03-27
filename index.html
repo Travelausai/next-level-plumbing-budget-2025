@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Budget Savings | Next Level Plumbing and Maintenance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="https://nextlevelplumbing.uk/">
+                    <img src="https://nextlevelplumbing.uk/wp-content/uploads/2021/04/logo.png" alt="Next Level Plumbing and Maintenance">
+                </a>
+                <h1>Next Level Plumbing and Maintenance</h1>
+            </div>
+            <div class="header-right">
+                <div class="rating">
+                    <div class="stars">★★★★★</div>
+                    <span>5.0 Stars - 47 Reviews</span>
+                </div>
+                <div class="header-contact">
+                    <a href="mailto:info@nextlevelplumbing.uk">
+                        <i class="fas fa-envelope"></i> info@nextlevelplumbing.uk
+                    </a>
+                    <a href="#contact" class="btn">Book Your Consultation</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="alert-banner">
+                <p>SPRING BUDGET ALERT: Tax changes coming April 6th, 2025</p>
+            </div>
+            <h1><span>NEXT</span> <span>LEVEL</span> SAVINGS</h1>
+            <h2>Beat the Budget Changes - Save Hundreds on Your Dream Bathroom</h2>
+            <p class="lead">Book your bathroom renovation before April 6, 2025, and avoid the upcoming cost increases from employer National Insurance and tax changes.</p>
+            <div class="hero-cta">
+                <a href="#calculator" class="btn btn-large">Calculate Your Savings</a>
+                <a href="#contact" class="btn btn-large btn-outline">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="offer">
+        <div class="container">
+            <h2>Our Core Offer</h2>
+            <div class="offer-content">
+                <p>Book your bathroom renovation with Next Level Plumbing before April 6, 2025, with just a 10% deposit to lock in current prices and avoid the upcoming cost increases from employer National Insurance and tax changes.</p>
+                <div class="offer-features">
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">
+                            <h3>Next Level Guarantee</h3>
+                            <p>Price locked in with 10% deposit, regardless of when work commences</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">
+                            <h3>Expert Consultation</h3>
+                            <p>Free detailed home survey and bathroom design consultation</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">
+                            <h3>Finance Options</h3>
+                            <p>Flexible payment plans available</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <div class="feature-text">
+                            <h3>Bathroom Visualizer</h3>
+                            <p>4K 3D digital design rendering showing potential transformations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison">
+        <div class="container">
+            <h2>Cost Comparison Example</h2>
+            <div class="comparison-boxes">
+                <div class="comparison-box">
+                    <div class="comparison-header">
+                        <h3>BOOK NOW</h3>
+                        <p>(Before April 6, 2025)</p>
+                    </div>
+                    <div class="comparison-content">
+                        <ul>
+                            <li>Complete bathroom renovation: £7,500</li>
+                            <li>Professional installation by Next Level certified technicians</li>
+                            <li>Quality fixtures and expert craftsmanship</li>
+                        </ul>
+                        <div class="comparison-total">
+                            <p>TOTAL: £7,500</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="comparison-box">
+                    <div class="comparison-header">
+                        <h3>BOOK AFTER APRIL 6, 2025</h3>
+                    </div>
+                    <div class="comparison-content">
+                        <ul>
+                            <li>Complete bathroom renovation: £7,500</li>
+                            <li>Additional costs due to employer NI increase (13.8% → 15%): +£90</li>
+                            <li>Additional costs due to Secondary Threshold reduction: +£165</li>
+                            <li>Materials cost adjustment: +£210</li>
+                        </ul>
+                        <div class="comparison-total">
+                            <p>TOTAL: £7,965</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="savings-highlight">
+                <h3>YOUR SAVINGS: £465</h3>
+                <p><em>"Don't let the Chancellor's tax changes increase the cost of your dream bathroom."</em></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <h2>Calculate Your Savings</h2>
+            <p>Use our calculator to see how much you could save by booking your bathroom renovation before the April 6th tax changes.</p>
+            
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="renovation-cost">Estimated Renovation Cost (£):</label>
+                    <input type="number" id="renovation-cost" min="1000" step="100" value="7500">
+                </div>
+                <button id="calculate-btn" class="btn">Calculate Savings</button>
+            </div>
+            
+            <div class="calculator-results">
+                <div class="result-item">
+                    <h3>Current Price:</h3>
+                    <p id="current-price">£7,500</p>
+                </div>
+                <div class="result-item">
+                    <h3>Price After April 6th:</h3>
+                    <p id="future-price">£7,965</p>
+                </div>
+                <div class="result-item highlight">
+                    <h3>Your Savings:</h3>
+                    <p id="savings-amount">£465</p>
+                </div>
+                <div class="result-breakdown">
+                    <h4>Breakdown of Additional Costs:</h4>
+                    <ul>
+                        <li>Employer NI increase: <span id="ni-increase">£90</span></li>
+                        <li>Secondary Threshold reduction: <span id="threshold-cost">£165</span></li>
+                        <li>Materials cost adjustment: <span id="materials-cost">£210</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>WHY CHOOSE US?</h2>
+            <ul class="feature-list">
+                <li>Local, friendly, family-run business</li>
+                <li>Excellent communication and customer service</li>
+                <li>Exceptional craftsmanship and attention to detail</li>
+                <li>High-quality products from reputable suppliers</li>
+                <li>4K 3D digital design rendering available</li>
+                <li>Design fee refundable if you choose us for your installation</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Book Your Consultation</h2>
+            <p>Lock in your savings today with just a 10% deposit. Fill out the form below and our team will contact you to arrange your free consultation.</p>
+            
+            <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postcode">Postcode:</label>
+                        <input type="text" id="postcode" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell us about your project:</label>
+                    <textarea id="message" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-large">CONTACT US TODAY</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">
+                        <img src="https://nextlevelplumbing.uk/wp-content/uploads/2021/04/logo.png" alt="Next Level Plumbing and Maintenance">
+                        <h3><span>NEXT</span> <span>LEVEL</span></h3>
+                    </div>
+                    <p>Quality bathroom renovations with expert craftsmanship</p>
+                </div>
+                <div class="footer-contact">
+                    <p><i class="fas fa-phone"></i> 01234 567890</p>
+                    <p><i class="fas fa-envelope"></i> info@nextlevelplumbing.uk</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, London, UK</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Next Level Plumbing and Maintenance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
