@@ -5,10 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentPriceElement = document.getElementById('current-price');
     const futurePriceElement = document.getElementById('future-price');
     const savingsAmountElement = document.getElementById('savings-amount');
-    const niIncreaseElement = document.getElementById('ni-increase');
-    const thresholdCostElement = document.getElementById('threshold-cost');
-    const materialsCostElement = document.getElementById('materials-cost');
-
+    
     // Set initial values
     updateCalculator(7500);
 
@@ -58,9 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
         currentPriceElement.textContent = formatCurrency(renovationCost);
         futurePriceElement.textContent = formatCurrency(futurePrice);
         savingsAmountElement.textContent = formatCurrency(totalAdditionalCost);
-        niIncreaseElement.textContent = formatCurrency(niIncrease);
-        thresholdCostElement.textContent = formatCurrency(thresholdCost);
-        materialsCostElement.textContent = formatCurrency(materialsCost);
         
         // Add animation effect to highlight the savings
         savingsAmountElement.classList.add('highlight-animation');
@@ -68,35 +62,15 @@ document.addEventListener('DOMContentLoaded', function() {
             savingsAmountElement.classList.remove('highlight-animation');
         }, 1000);
     }
-
-    // Handle contact form submission
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
-            const postcode = document.getElementById('postcode').value;
-            const message = document.getElementById('message').value;
-            
-            // In a real implementation, you would send this data to a server
-            // For this demo, we'll just show a success message
-            alert(`Thank you, ${name}! Your consultation request has been received. We'll contact you shortly to arrange your free consultation.`);
-            
-            // Reset form
-            contactForm.reset();
-        });
-    }
     
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Smooth scrolling for anchor links (excluding read more links)
+    document.querySelectorAll('a[href^="#"]:not(.read-more)').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             
             const targetId = this.getAttribute('href');
+            if (targetId === '#') return; // Skip empty anchors
+            
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
@@ -106,5 +80,60 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
+    });
+    
+    // Read More functionality for testimonials
+    document.querySelectorAll('.read-more').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const testimonialText = this.closest('.testimonial-text');
+            const shortText = testimonialText.querySelector('.short-text');
+            const fullText = testimonialText.querySelector('.full-text');
+            
+            if (shortText.style.display !== 'none') {
+                // Show full text
+                shortText.style.display = 'none';
+                fullText.style.display = 'inline';
+                this.textContent = 'read less';
+            } else {
+                // Show short text
+                shortText.style.display = 'inline';
+                fullText.style.display = 'none';
+                this.textContent = 'read more';
+            }
+        });
+    });
+    
+    // Pop-up CTA functionality
+    const popup = document.getElementById('popup-cta');
+    const closePopup = document.querySelector('.close-popup');
+    
+    // Show popup after 5 seconds
+    setTimeout(() => {
+        popup.style.display = 'block';
+    }, 5000);
+    
+    // Close popup when clicking the X
+    if (closePopup) {
+        closePopup.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+    }
+    
+    // Close popup when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+    
+    // Show popup when user scrolls to bottom
+    let popupShown = false;
+    window.addEventListener('scroll', () => {
+        if (!popupShown && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 300) {
+            popup.style.display = 'block';
+            popupShown = true;
+        }
     });
 });

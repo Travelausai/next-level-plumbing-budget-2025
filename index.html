@@ -31,73 +31,81 @@
                 </a>
                 <h1>Next Level Plumbing and Maintenance</h1>
             </div>
-            <div class="header-right">
-                <div class="rating">
-                    <a href="https://nextlevelplumbing.uk/reviews/" class="rating-link">
-                        <div class="stars">★★★★★</div>
-                        <span>5.0 Stars - 47 Reviews</span>
-                    </a>
-                </div>
-                <div class="header-contact">
-                    <a href="mailto:info@nextlevelplumbing.uk">
-                        <i class="fas fa-envelope"></i> info@nextlevelplumbing.uk
-                    </a>
-                    <a href="#contact" class="btn">Book Your Consultation</a>
-                </div>
-            </div>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
             <div class="alert-banner">
-                <p>SPRING BUDGET ALERT: Tax changes coming April 6th, 2025</p>
+                <p>URGENT: Tax changes coming April 6th, 2025 - LOCK IN YOUR PRICE NOW!</p>
             </div>
-            <h1><span>NEXT</span> <span>LEVEL</span> SAVINGS</h1>
-            <h2>Beat the Budget Changes - Save Hundreds on Your Dream Bathroom</h2>
-            <p class="lead">Book your bathroom renovation before April 6, 2025, and avoid the upcoming cost increases from employer National Insurance and tax changes.</p>
+            <h1>SAVE HUNDREDS ON YOUR <span>DREAM BATHROOM</span></h1>
+            <h2>Beat the Budget Changes Before April 6th Deadline</h2>
+            
+            <!-- Calculator moved to hero section -->
+            <div class="hero-calculator">
+                <div class="calculator-form">
+                    <h3>Calculate Your Savings</h3>
+                    <div class="form-group">
+                        <label for="renovation-cost">Estimated Renovation Cost (£):</label>
+                        <input type="number" id="renovation-cost" min="1000" step="100" value="7500">
+                    </div>
+                    <button id="calculate-btn" class="btn">Calculate Savings</button>
+                </div>
+                
+                <div class="calculator-results">
+                    <div class="result-item">
+                        <h3>Current Price:</h3>
+                        <p id="current-price">£7,500</p>
+                    </div>
+                    <div class="result-item">
+                        <h3>Price After April 6th:</h3>
+                        <p id="future-price">£7,965</p>
+                    </div>
+                    <div class="result-item highlight">
+                        <h3>Your Savings:</h3>
+                        <p id="savings-amount">£465</p>
+                    </div>
+                </div>
+            </div>
+            
             <div class="hero-cta">
-                <a href="#calculator" class="btn btn-large">Calculate Your Savings</a>
-                <a href="#contact" class="btn btn-large btn-outline">Book Now</a>
+                <a href="#contact" class="btn btn-large">BOOK YOUR FREE CONSULTATION</a>
+                <a href="#services" class="btn btn-large btn-outline">VIEW OUR SERVICES</a>
             </div>
         </div>
     </section>
 
-    <section class="offer">
+    <section id="services" class="services">
         <div class="container">
-            <h2>Our Core Offer</h2>
-            <div class="offer-content">
-                <p>Book your bathroom renovation with Next Level Plumbing before April 6, 2025, with just a 30% deposit to lock in current prices and avoid the upcoming cost increases from employer National Insurance and tax changes.</p>
-                <div class="offer-features">
-                    <div class="feature">
-                        <div class="feature-icon">✓</div>
-                        <div class="feature-text">
-                            <h3>Next Level Guarantee</h3>
-                            <p>Price locked in with 30% deposit, regardless of when work commences</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">✓</div>
-                        <div class="feature-text">
-                            <h3>Expert Consultation</h3>
-                            <p>Free detailed home survey and bathroom design consultation</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">✓</div>
-                        <div class="feature-text">
-                            <h3>Finance Options</h3>
-                            <p>Flexible payment plans available</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">✓</div>
-                        <div class="feature-text">
-                            <h3>Bathroom Visualizer</h3>
-                            <p>4K 3D digital design rendering showing potential transformations</p>
-                        </div>
-                    </div>
+            <h2>OUR BATHROOM RENOVATION SERVICES</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-bath"></i></div>
+                    <h3>Complete Bathroom Renovations</h3>
+                    <p>Full bathroom transformations with expert design and installation</p>
                 </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-shower"></i></div>
+                    <h3>Shower Installations</h3>
+                    <p>Custom shower solutions from walk-in to luxury rainfall systems</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-sink"></i></div>
+                    <h3>Vanity & Storage Solutions</h3>
+                    <p>Stylish and functional vanities and storage options</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+                    <h3>Tiling & Decoration</h3>
+                    <p>Expert tiling and finishing touches to complete your dream bathroom</p>
+                </div>
+            </div>
+            
+            <div class="offer-box">
+                <h3>LOCK IN YOUR PRICE WITH JUST 30% DEPOSIT</h3>
+                <p>Book before April 6th to avoid the upcoming cost increases from employer National Insurance and tax changes.</p>
+                <a href="#contact" class="btn">Book Your Consultation</a>
             </div>
         </div>
     </section>
@@ -140,7 +148,7 @@
                 </div>
             </div>
             <div class="savings-highlight">
-                <h3>YOUR SAVINGS: £465</h3>
+                <h3>YOUR POTENTIAL SAVINGS</h3>
                 <p><em>"Don't let the Chancellor's tax changes increase the cost of your dream bathroom."</em></p>
             </div>
         </div>
@@ -177,39 +185,43 @@
         </div>
     </section>
 
-    <section id="calculator" class="calculator">
+    <!-- Testimonials Section with Actual Reviews and Read More Functionality -->
+    <section class="testimonials">
         <div class="container">
-            <h2>Calculate Your Savings</h2>
-            <p>Use our calculator to see how much you could save by booking your bathroom renovation before the April 6th tax changes.</p>
-            
-            <div class="calculator-form">
-                <div class="form-group">
-                    <label for="renovation-cost">Estimated Renovation Cost (£):</label>
-                    <input type="number" id="renovation-cost" min="1000" step="100" value="7500">
+            <h2>WHAT OUR CUSTOMERS SAY</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            <span class="short-text">"Jordan and his team exceeded all our expectations, from the first contact by email to the..."</span>
+                            <span class="full-text">"Jordan and his team exceeded all our expectations, from the first contact by email to the completed bathroom. Next Level Plumbing's highly professional approach to all they did for our bathroom project showed just how much they care about their customers' needs. When designing our bathroom, Jordan was exceptionally quick in sourcing supplies and understood exactly the effect we were hoping to achieve. We were so impressed with the level and speed of communication; we were kept informed of all developments and when they would take place throughout the whole process. The team were polite, friendly and extremely respectful of being in someone's home. Coverings were laid on the carpets to ensure cleanliness and they always cleared up at the end of each day. Every element of the new bathroom being put in, ie removal of old bathroom, new piping being laid, plastering, tiling, painting, new flooring and putting in the new bathroom was coordinated so well that the bathroom was finished before we expected. We are thrilled with our new bathroom. Its finish is of the highest standard. Jordan and his team could not have been more helpful, professional, considerate and hardworking. If you are thinking of having a new bathroom put in or need any plumbing work, we cannot recommend Next level Plumbing highly enough."</span>
+                            <a href="javascript:void(0)" class="read-more">read more</a>
+                        </p>
+                    </div>
+                    <p class="testimonial-author">- Suzanne A., April 2024</p>
                 </div>
-                <button id="calculate-btn" class="btn">Calculate Savings</button>
-            </div>
-            
-            <div class="calculator-results">
-                <div class="result-item">
-                    <h3>Current Price:</h3>
-                    <p id="current-price">£7,500</p>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            <span class="short-text">"Work carried out to a high standard and on time. I would use this company again..."</span>
+                            <span class="full-text">"Work carried out to a high standard and on time. I would use this company again. Very professional service from start to finish. The team was clean, tidy and respectful of our home. They explained everything clearly and were always available to answer questions. Couldn't be happier with our new bathroom."</span>
+                            <a href="javascript:void(0)" class="read-more">read more</a>
+                        </p>
+                    </div>
+                    <p class="testimonial-author">- Monica A.</p>
                 </div>
-                <div class="result-item">
-                    <h3>Price After April 6th:</h3>
-                    <p id="future-price">£7,965</p>
-                </div>
-                <div class="result-item highlight">
-                    <h3>Your Savings:</h3>
-                    <p id="savings-amount">£465</p>
-                </div>
-                <div class="result-breakdown">
-                    <h4>Breakdown of Additional Costs:</h4>
-                    <ul>
-                        <li>Employer NI increase: <span id="ni-increase">£90</span></li>
-                        <li>Secondary Threshold reduction: <span id="threshold-cost">£165</span></li>
-                        <li>Materials cost adjustment: <span id="materials-cost">£210</span></li>
-                    </ul>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            <span class="short-text">"Next level provided me with a super service, from start to finish. Complete removal of old..."</span>
+                            <span class="full-text">"Next level provided me with a super service, from start to finish. Complete removal of old bathroom and installation of new one. Highly recommended! The design process was smooth and they helped us choose the perfect fixtures and fittings. The finished bathroom looks amazing and has transformed our home."</span>
+                            <a href="javascript:void(0)" class="read-more">read more</a>
+                        </p>
+                    </div>
+                    <p class="testimonial-author">- Aaron G., August 2024</p>
                 </div>
             </div>
         </div>
@@ -231,29 +243,44 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Book Your Consultation</h2>
+            <h2>BOOK YOUR FREE CONSULTATION</h2>
             <p>Lock in your savings today with just a 30% deposit. Fill out the form below and our team will contact you to arrange your free consultation.</p>
             
-            <div class="form-container" style="height: 708px;">
-                <iframe
-                  src="https://link.conversionsuite.co/widget/form/jaAVJYuyZLLhogEJRwX3"
-                  style="width:100%;height:100%;border:none;border-radius:3px"
-                  id="inline-jaAVJYuyZLLhogEJRwX3"
-                  data-layout="{'id':'INLINE'}"
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name="LP Opt In"
-                  data-height="708"
-                  data-layout-iframe-id="inline-jaAVJYuyZLLhogEJRwX3"
-                  data-form-id="jaAVJYuyZLLhogEJRwX3"
-                  title="LP Opt In"
-                      >
-                </iframe>
-                <script src="https://link.conversionsuite.co/js/form_embed.js"></script>
+            <div class="contact-box">
+                <div class="contact-info">
+                    <h3>Why Book Now?</h3>
+                    <ul class="contact-benefits">
+                        <li><i class="fas fa-check-circle"></i> Lock in current prices before April 6th tax changes</li>
+                        <li><i class="fas fa-check-circle"></i> Save hundreds on your bathroom renovation</li>
+                        <li><i class="fas fa-check-circle"></i> Free 4K 3D digital design rendering</li>
+                        <li><i class="fas fa-check-circle"></i> Flexible payment plans available</li>
+                    </ul>
+                    <div class="contact-cta">
+                        <p><i class="fas fa-phone"></i> Call us: <a href="tel:07488580978">07488 580978</a></p>
+                    </div>
+                </div>
+                
+                <div class="form-container" style="height: 500px;">
+                    <iframe
+                      src="https://link.conversionsuite.co/widget/form/jaAVJYuyZLLhogEJRwX3"
+                      style="width:100%;height:100%;border:none;border-radius:3px"
+                      id="inline-jaAVJYuyZLLhogEJRwX3"
+                      data-layout="{'id':'INLINE'}"
+                      data-trigger-type="alwaysShow"
+                      data-trigger-value=""
+                      data-activation-type="alwaysActivated"
+                      data-activation-value=""
+                      data-deactivation-type="neverDeactivate"
+                      data-deactivation-value=""
+                      data-form-name="LP Opt In"
+                      data-height="500"
+                      data-layout-iframe-id="inline-jaAVJYuyZLLhogEJRwX3"
+                      data-form-id="jaAVJYuyZLLhogEJRwX3"
+                      title="LP Opt In"
+                          >
+                    </iframe>
+                    <script src="https://link.conversionsuite.co/js/form_embed.js"></script>
+                </div>
             </div>
         </div>
     </section>
@@ -279,7 +306,17 @@
             </div>
         </div>
     </footer>
+<!-- Pop-up CTA (New) -->
+<div id="popup-cta" class="popup-cta">
+    <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h3>DON'T MISS OUT ON SAVINGS!</h3>
+        <p>Book your bathroom renovation before April 6th and save hundreds!</p>
+        <a href="#contact" class="btn btn-large popup-btn">BOOK NOW</a>
+    </div>
+</div>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
+</html>
 </html>
